@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  position: fixed;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5em;
+  justify-content: center;
+  align-items: center;
+}
+.nav-right>span {
+  font-size: 20px;
+}
+.nav-right>i {
+  color: red;
+}
+#logo {
+  font-family: Bungee;
+  font-size: 30px;
+  margin-left: 1.5em;
+}
