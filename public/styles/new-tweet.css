@@ -1,0 +1,41 @@
+
+section {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  width: 90%;
+}
+h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #545149
+}
+textarea {
+  border: none;
+  border-bottom: 4px solid grey;
+  width: 100%;
+  margin-top: .8em;
+}
+.counter-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .8em;
+}
+.button {
+  background-color: #4056A1;
+  color: #FFF;
+  border-radius: 10%;
+  border: none;
+  font-family: bungee;
+  font-size: 1em;
+  padding: 0 1em;
+}
+.button:hover {}
+.counter {
+  font-family: bungee;
+}
+label {
+  font-family: "Source Sans Pro", sans-serif;
+}
