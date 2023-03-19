@@ -12,6 +12,12 @@ header {
 header>div>img {
   height: 155px;
 }
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
 h2 {
  color: #FFFFFF;
  font-weight: 400;
