@@ -6,7 +6,10 @@ $(document).ready(function() {
     $(".counter").text(charactersLeft);
     if (charactersLeft < 0) {
       $(".counter").css("color", "red");
-    }
+    } else $(".counter").css("color", "#545149");
+  });
+  $('.icon').on('click', function() {
+    $(this).addClass('clicked');
   });
 
 
