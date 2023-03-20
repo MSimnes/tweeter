@@ -24,7 +24,10 @@
 
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css">
-
+    
+    <!-- Tweets CSS -->
+    <link rel="stylesheet" href="/styles/tweets.css">
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -44,7 +47,7 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header>
+    <header id="page-header">
       <div>
         <img src="images/profile-hex.png" alt="">
       </div>
@@ -67,7 +70,24 @@
           </div>
         </form>
       </section>
-    
+          <article class="tweet-container">
+            <header>
+              <div class="user-avatar-name">
+                <i class="fa-regular fa-user"></i>
+                <span>Name</span>
+              </div>
+              <div class="userID">@YourName</div>
+            </header>
+            <p class="display-tweet">If I have seen further it is by standing on the shoulders of giants</p>
+            <footer>
+              <div class="time-posted">4 days ago</div>
+              <div class="interaction-icons">
+                <i class="fa fa-flag icon" aria-hidden="true"></i>
+                <i class="fa fa-retweet icon" aria-hidden="true"></i>
+                <i class="fa-solid fa-heart icon" aria-hidden="true"></i>
+              </div>
+            </footer>
+          </article>
     </main>
   </body>
 </html>
