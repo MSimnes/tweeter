@@ -1,17 +1,17 @@
-header {
+#page-header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 420px;
+  height: 520px;
   width: 100vw;
   background-color: #dd9e2b;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-header>div>img {
+/* header>div>img {
   height: 155px;
-}
+} */
 .name-container {
   display: flex;
   justify-content: center;
