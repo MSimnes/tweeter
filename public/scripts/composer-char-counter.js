@@ -1,5 +1,4 @@
 $(document).ready(function() {
-// character counter
   $("#tweet-text").on("input", function() {
     let tweetLength = $(this).val().length;
     let charactersLeft = 140 - tweetLength;
@@ -11,6 +10,4 @@ $(document).ready(function() {
   $('.icon').on('click', function() {
     $(this).addClass('clicked');
   });
-
-
 });
