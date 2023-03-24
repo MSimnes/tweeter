@@ -1,12 +1,20 @@
 $(document).ready(function() {
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
-    const tweetData = $(this).serialize();
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: tweetData,
-    });
+    const tweetText = $('#tweet-text').val().trim();
+    const encodedTweetText = encodeURIComponent(tweetText);
+    if (encodedTweetText.length === 0) {
+      window.alert("Tweet cannot be 0 characters");
+    } else if (encodedTweetText.length > 140) {
+      window.alert("Tweet cannot be more than 140 characters");
+    } else {
+      const tweetData = `text=${encodedTweetText}`;
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $(this).serialize(),
+      });
+    }
   });
   
   const loadTweets = function() {
