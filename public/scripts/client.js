@@ -3,12 +3,25 @@ $(document).ready(function() {
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
     const tweetText = $('#tweet-text').val().trim();
-    //escaping special characters
     const encodedTweetText = encodeURIComponent(tweetText);
     if (encodedTweetText.length === 0) {
-      window.alert("Tweet cannot be 0 characters");
+      $("#new-tweet-h2").hide();
+      $("#error-too-short").show();
+      $('#tweet-text').on('input', function() {
+        if ($(this).val().length > 0) {
+          $("#error-too-short").hide();
+          $("#new-tweet-h2").show();
+        }
+      });
     } else if (encodedTweetText.length > 140) {
-      window.alert("Tweet cannot be more than 140 characters");
+      $("#new-tweet-h2").hide();
+      $("#error-too-long").show();
+      $('#tweet-text').on('input', function() {
+        if ($(this).val().trim().length < 141) {
+          $("#error-too-long").hide();
+          $("#new-tweet-h2").show();
+        }
+      });
     } else {
       $.ajax({
         method: "POST",
