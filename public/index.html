@@ -69,7 +69,9 @@
   <main class="container">
     <section class="new-tweet">
       <div class="h2-container">
-        <h2>Compose <b>Tweet</b></h2>
+        <h2 id="new-tweet-h2">Compose <b>Tweet</b></h2>
+        <h2 id="error-too-long">Tweet is too long, please keep your tweets to 140 characters or less. Thanks.</h2>
+        <h2 id="error-too-short">Tweets cannot be zero characters. Thanks.</h2>
       </div>
       <form id="tweet-form" method="POST" action="/tweets/">
         <label for="tweet-text">What are you humming about?</label>
