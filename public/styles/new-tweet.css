@@ -12,6 +12,11 @@ h2 {
   font-family: "Source Sans Pro", sans-serif;
   color: #545149
 }
+#error-too-long, #error-too-short {
+  display: none;
+  border: .1em solid red;
+  color: red;
+}
 textarea {
   border: none;
   border-bottom: 4px solid #545149;
