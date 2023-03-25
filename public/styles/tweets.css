@@ -29,8 +29,10 @@
   margin-bottom: .6em;
   padding-bottom: 1.2em;
   padding-left: 1em;
+  padding-right: 1em;
   font-size: .7em;
   font-weight: bold;
+  word-wrap: break-word;
 }
 .tweet-container>footer {
   display: flex;
