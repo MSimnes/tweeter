@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
     const tweetText = $('#tweet-text').val().trim();
@@ -45,6 +46,12 @@ $(document).ready(function() {
     }
     $("#tweet-section").append(markup);
   };
+  // prevent cross site scripting
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const createTweetElement = function(object) {
     const timeAgoString = timeago.format(new Date(object.created_at));
@@ -57,7 +64,7 @@ $(document).ready(function() {
                 </div>
                 <div class="userID">${object.user.handle}</div>
               </header>
-              <p class="display-tweet">${object.content.text}</p>
+              <p class="display-tweet">${escape(object.content.text)}</p>
               <footer>
                 <div class="time-posted">${timeAgoString}</div>
                 <div class="interaction-icons">
