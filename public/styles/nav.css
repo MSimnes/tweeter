@@ -26,3 +26,12 @@ nav {
   font-size: 30px;
   margin-left: 1.5em;
 }
+
+/* toggle hide show */
+#toggle-new-tweet {
+  background-color: inherit;
+  border: none;
+}
+#toggle-new-tweet:hover {
+  cursor: pointer;
+}
