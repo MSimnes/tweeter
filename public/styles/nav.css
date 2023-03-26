@@ -31,7 +31,19 @@ nav {
 #toggle-new-tweet {
   background-color: inherit;
   border: none;
+  color: #FFFFFF;
 }
 #toggle-new-tweet:hover {
   cursor: pointer;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
+    height: 2em;
+    background-color: #dd9e2b;
+  }
+  #toggle-new-tweet {
+    margin-top: 1em;
+  }
 }
