@@ -33,3 +33,15 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ #jump-to-top {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+  font-size: 2em;
+ }
+ #jump-to-top {
+  cursor: pointer;
+ }
