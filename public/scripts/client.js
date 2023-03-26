@@ -1,9 +1,12 @@
 $(document).ready(function() {
+  // toggle new tweet button in nav bar
   $("#toggle-new-tweet").on('click', function() {
-    $('.new-tweet').slideDown("slow", function() {
+    $(".new-tweet").slideDown("slow", function() {
       $(this).css("display", "flex");
+      $("#tweet-text").focus();
     });
   });
+  // new tweet submission
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
     const tweetText = $('#tweet-text').val().trim();
@@ -39,8 +42,23 @@ $(document).ready(function() {
         }
       });
     }
+    $("#tweet-text").val('');
   });
-  
+  // jump to top appear on scroll
+  $(window).scroll(function() {
+    const scrollPos = $(window).scrollTop();
+    if (scrollPos > 200) {
+      $('#jump-to-top').css("display", "block");
+    } else {
+      $('#jump-to-top').css("display", "none");
+    }
+  });
+  // scroll to top after clicking icon
+  $("#jump-to-top").on("click", function() {
+    $("html, body").animate({scrollTop:0}, "slow");
+  });
+
+  // helper functions
   const loadTweets = function() {
     $.ajax({
       method: "GET",
@@ -93,43 +111,4 @@ $(document).ready(function() {
             </article>`;
     return $markup;
   };
-  
-  // Test / driver code (temporary). Eventually will get this from the server.
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com?73hZDYK.png",
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 12
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd"
-  //     },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1679267767141
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "John Cena ",
-  //       "avatars": "https://i.imgur.com?73hZDYK.png",
-  //       "handle": "@JohnCena"
-  //     },
-  //     "content": {
-  //       "text": "Ya'll can't see me"
-  //     },
-  //     "created_at": 4
-  //   }
-  // ];
-
-  // renderTweets(data);
 });
