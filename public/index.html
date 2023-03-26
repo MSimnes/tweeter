@@ -75,7 +75,7 @@
       </div>
       <form id="tweet-form" method="POST" action="/tweets/">
         <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text" cols="60" rows="1" placeholder="Compose here"></textarea>
+        <textarea name="text" id="tweet-text" cols="60" rows="1"></textarea>
         <div class="counter-section">
           <button type="submit" class="button">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
@@ -86,6 +86,7 @@
       <!-- Tweets dynamically loaded here -->
     </div>
   </main>
+  <i class="fas fa-angle-double-up" id="jump-to-top" style="color: #df0c56;"></i>
 </body>
 
 </html>
