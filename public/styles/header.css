@@ -8,10 +8,22 @@
   background-color: #dd9e2b;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
-
-/* header>div>img {
-  height: 155px;
-} */
+/* Desktop */
+@media (min-width: 1024px) {
+  #page-header {
+    margin-top: 10em;
+    margin-left: 1.5em;
+    height: 400px;
+    width: 55vw;
+    border-radius: 1em;
+  }
+ }
+ /* Mobile */
+@media (max-width: 768px) {
+  #page-header {
+    height: 370px;
+  }
+}
 .name-container {
   display: flex;
   justify-content: center;
