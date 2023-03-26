@@ -1,5 +1,9 @@
 $(document).ready(function() {
-  
+  $("#toggle-new-tweet").on('click', function() {
+    $('.new-tweet').slideDown("slow", function() {
+      $(this).css("display", "flex");
+    });
+  });
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
     const tweetText = $('#tweet-text').val().trim();
