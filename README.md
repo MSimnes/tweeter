@@ -12,11 +12,11 @@ Mobile:
 
 Tablet:
 
-!["Tablet layout with tweet composer hidden"](https://github.com/MSimnes/tweeter/blob/master/docs/tablet-tweet-view.png?raw=true)
+!["Tablet layout with tweet composer hidden"](https://github.com/MSimnes/tweeter/blob/master/docs/tablet-view.png?raw=true)
 
 Desktop:
 
-!["Desktop layout with tweet composer hidden"](https://github.com/MSimnes/tweeter/blob/master/docs/desktop-tweet-view.png?raw=true)
+!["Desktop layout with tweet composer hidden"](https://github.com/MSimnes/tweeter/blob/master/docs/desktop-view.png?raw=true)
 
 ## Getting Started
 
