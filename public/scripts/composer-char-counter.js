@@ -7,7 +7,4 @@ $(document).ready(function() {
       $(".counter").css("color", "red");
     } else $(".counter").css("color", "#545149");
   });
-  $('.icon').on('click', function() {
-    $(this).addClass('clicked');
-  });
 });
