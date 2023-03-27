@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
-
   <!-- Import fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -18,34 +15,25 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
     rel="stylesheet">
-
-
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
   <!-- Nav CSS -->
   <link rel="stylesheet" href="/styles/nav.css">
-
   <!-- Header CSS -->
   <link rel="stylesheet" href="/styles/header.css">
-
   <!-- New Tweet CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css">
-
   <!-- Tweets CSS -->
   <link rel="stylesheet" href="/styles/tweets.css">
-
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
   <!-- Import timeago -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <!-- App JS -->
-  <script type="text/javascript" src="./scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script defer type="text/javascript" src="/scripts/tweet-helpers.js"></script>
+  <script defer type="text/javascript" src="./scripts/client.js"></script>
+  <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
-
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
@@ -57,6 +45,7 @@
       <i class="fas fa-angle-double-down fa-bounce"></i>
     </div>
   </nav>
+  <!-- Page header -->
   <header id="page-header">
     <div>
       <img src="images/profile-hex.png" alt="">
@@ -88,5 +77,4 @@
   </main>
   <i class="fas fa-angle-double-up" id="jump-to-top" style="color: #df0c56;"></i>
 </body>
-
 </html>
