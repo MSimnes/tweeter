@@ -31,6 +31,10 @@ textarea {
   background-color: #f4f1ec;
   width: 100%;
   margin-top: .8em;
+  outline: none;
+  min-height: 1.5em;
+  height: auto;
+  resize: none;
 }
 .counter-section {
   display: flex;
