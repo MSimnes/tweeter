@@ -1,13 +1,5 @@
 $(document).ready(function() {
 
-  // toggle new tweet button in nav bar
-  $("#toggle-new-tweet").on('click', function() {
-    $(".new-tweet").slideDown("slow", function() {
-      $(this).css("display", "flex");
-      $("#tweet-text").focus();
-    });
-  });
-
   // new tweet submission
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
@@ -41,9 +33,14 @@ $(document).ready(function() {
         },
         error: function(err) {
           console.log("Error --", err);
+        },
+        complete: function() {
+          $("#tweet-text").val('');
+          $(".counter").text("140");
+          $("textarea").css("height", "1.5em");
+          $("#tweet-text").focus();
         }
       });
-      $("#tweet-text").val('');
     }
   });
 
